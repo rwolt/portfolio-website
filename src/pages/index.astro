@@ -9,16 +9,69 @@ import Layout from "../layouts/default.astro";
       <p></p>
     </section>
     <section class="block" id="about">
-      <h2>What I Do</h2>
+      <h2>About Me</h2>
     </section>
     <section class="block" id="projects">
       <h2>My Projects</h2>
-    </section>
-    <section class="block" id="writing">
-      <h2>Writing</h2>
+      <div class="container">
+        <a href="/project-1">
+          <div class="card">
+            <img src="#" width="400px" height="300px" />
+            <div class="card-info"><p>Project 1</p></div>
+          </div>
+        </a>
+        <a href="/project-2">
+          <div class="card">
+            <img src="#" width="400px" height="300px" />
+            <div class="card-info"><p>Project 2</p></div>
+          </div>
+        </a>
+        <a href="/project-3">
+          <div class="card">
+            <img src="#" width="400px" height="300px" />
+            <div class="card-info"><p>Project 3</p></div>
+          </div>
+        </a>
+      </div>
     </section>
     <section class="block" id="contact">
       <h2>Contact</h2>
     </section>
   </main>
 </Layout>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .container > a {
+    text-decoration: none;
+  }
+  
+
+
+  .card {
+    width: 400px;
+    height: 400px;
+  }
+
+  .card-info {
+    text-align: center;
+  }
+
+  .card-info > p {
+    text-decoration: none;
+    color: black;
+  }
+
+  .card:hover {
+    cursor: pointer;
+  }
+
+  .card:hover > .card-info p {
+    text-decoration: underline;t
+  }
+</style>

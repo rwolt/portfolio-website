@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <!-- Hexagon background -->
-  <polygon points="32,2 61.57,17 61.57,47 32,62 2.43,47 2.43,17" fill="#007bff" />
-  
-  <!-- Text -->
-  <text x="50%" y="50%" font-size="20" text-anchor="middle" dy=".3em" fill="white">RW</text>
-</svg>
