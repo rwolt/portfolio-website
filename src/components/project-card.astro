@@ -1,0 +1,31 @@
+---
+const { imageURL, projectName } = Astro.props;
+---
+<div class="project-card">
+  <img src={imageURL} width="400px" height="300px" />
+  <div class="card-info"><p>{projectName}</p></div>
+</div>
+
+<style>
+  .project-card {
+    width: 400px;
+    height: 400px;
+  }
+
+  .project-card-info {
+    text-align: center;
+  }
+
+  .project-card-info > p {
+    text-decoration: none;
+    color: black;
+  }
+
+  .project-card:hover {
+    cursor: pointer;
+  }
+
+  .project-card:hover > .project-card-info p {
+    text-decoration: underline;t
+  }
+</style>

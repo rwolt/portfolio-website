@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/default.astro";
+import ProjectCard from "../components/project-card.astro";
 ---
 
 <Layout title="Welcome to raymondwolt.com">
@@ -13,24 +14,24 @@ import Layout from "../layouts/default.astro";
     </section>
     <section class="block" id="projects">
       <h2>My Projects</h2>
-      <div class="container">
+      <div class="projects-container">
         <a href="/project-1">
-          <div class="card">
-            <img src="#" width="400px" height="300px" />
-            <div class="card-info"><p>Project 1</p></div>
-          </div>
+          <ProjectCard
+            imageURL="/images/placeholder_400x300_white.png"
+            projectName="Social Media Site"
+          />
         </a>
         <a href="/project-2">
-          <div class="card">
-            <img src="#" width="400px" height="300px" />
-            <div class="card-info"><p>Project 2</p></div>
-          </div>
+          <ProjectCard
+            imageURL="/images/placeholder_400x300_white.png"
+            projectName="Restaurant Ordering Application"
+          />
         </a>
         <a href="/project-3">
-          <div class="card">
-            <img src="#" width="400px" height="300px" />
-            <div class="card-info"><p>Project 3</p></div>
-          </div>
+          <ProjectCard
+            imageURL="/images/placeholder_400x300_white.png"
+            projectName="Semantic Search"
+          />
         </a>
       </div>
     </section>
@@ -41,37 +42,13 @@ import Layout from "../layouts/default.astro";
 </Layout>
 
 <style>
-  .container {
+  .projects-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
 
-  .container > a {
+  .projects-container > a {
     text-decoration: none;
-  }
-  
-
-
-  .card {
-    width: 400px;
-    height: 400px;
-  }
-
-  .card-info {
-    text-align: center;
-  }
-
-  .card-info > p {
-    text-decoration: none;
-    color: black;
-  }
-
-  .card:hover {
-    cursor: pointer;
-  }
-
-  .card:hover > .card-info p {
-    text-decoration: underline;t
   }
 </style>

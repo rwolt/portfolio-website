@@ -1,0 +1,21 @@
+---
+const { index, text, imageURL } = Astro.props;
+---
+
+<div class=`project-detail-block ${index % 2 == 1 ? 'reverse' : ''}`>
+  <img src={imageURL} class="project-detail-image" />
+  <p>
+    {text}
+  </p>
+</div>
+
+<style>
+  .project-detail-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+</style>
