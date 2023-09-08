@@ -1,0 +1,57 @@
+<header>
+  <nav>
+    <a id="home" href="/"> RW</a>
+    <a href="/#about">About Me</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#">Resume</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 3rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav a:first-child {
+    margin-right: auto;
+  }
+
+  nav a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+  }
+
+  nav a:not(:first-child):not(:last-child):hover,
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  nav a:last-child {
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+  }
+
+  @media screen and (min-width: 320px) {
+    nav a:not(:first-child) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    nav a:not(:first-child) {
+      display: block;
+    }
+  }
+</style>

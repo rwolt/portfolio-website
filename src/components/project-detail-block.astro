@@ -12,10 +12,36 @@ const { index, text, imageURL } = Astro.props;
 <style>
   .project-detail-block {
     display: flex;
-    align-items: center;
   }
 
-  .reverse {
-    flex-direction: row-reverse;
+  @media screen and (min-width: 320px) {
+    .project-detail-block {
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+    }
+  }
+
+  @media screen and (min-width 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    .project-detail-block {
+      flex-direction: row;
+      width: 80%;
+      padding: 2rem;
+    }
+
+    .project-detail-block > img {
+      padding: 2rem;
+      width: 50%;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
   }
 </style>

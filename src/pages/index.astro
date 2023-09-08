@@ -4,51 +4,190 @@ import ProjectCard from "../components/project-card.astro";
 ---
 
 <Layout title="Welcome to raymondwolt.com">
-  <main>
-    <section class="block">
-      <h1>Hi, I'm Ray.</h1>
-      <p></p>
-    </section>
-    <section class="block" id="about">
-      <h2>About Me</h2>
-    </section>
-    <section class="block" id="projects">
-      <h2>My Projects</h2>
-      <div class="projects-container">
-        <a href="/project-1">
-          <ProjectCard
-            imageURL="/images/placeholder_400x300_white.png"
-            projectName="Social Media Site"
-          />
-        </a>
-        <a href="/project-2">
-          <ProjectCard
-            imageURL="/images/placeholder_400x300_white.png"
-            projectName="Restaurant Ordering Application"
-          />
-        </a>
-        <a href="/project-3">
-          <ProjectCard
-            imageURL="/images/placeholder_400x300_white.png"
-            projectName="Semantic Search"
-          />
-        </a>
+  <div class="container">
+    <section id="intro">
+      <div class="block">
+        <img src="/images/placeholder_300x400_white.png" />
+        <div>
+          <h2>Hi, I'm Raymond.</h2>
+          <p>
+            I’m a motivated developer who aims to create captivating web
+            applications. I have a solid foundation in the MERN (MongoDB,
+            Express, React, and Node) stack, with a keen interest in exploring
+            new technologies and best practices for web development. When I’m
+            not coding, I like to read books, listen to music, and explore
+            nature.
+          </p>
+          <h3>Skills:</h3>
+          <div class="skills-container">
+            <ul>
+              <li>Javascript</li>
+              <li>Typescript</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Astro</li>
+            </ul>
+            <div class="skills-column">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- <section id="about">
+      <h2>About Me</h2>
+      <div class="block">
+        <p></p>
+      </div>
+    </section> -->
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="block">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque
+            gravida in fermentum et. Phasellus faucibus scelerisque eleifend
+            donec. Erat pellentesque adipiscing commodo elit at. Tristique nulla
+            aliquet enim tortor at auctor. Purus sit amet luctus venenatis
+            lectus magna fringilla urna porttitor. Pretium fusce id velit ut
+            tortor pretium viverra suspendisse. Libero volutpat sed cras ornare
+            arcu dui vivamus arcu felis. Elit pellentesque habitant morbi
+            tristique senectus et. Quam quisque id diam vel quam elementum. Sed
+            lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi
+            tincidunt. Tincidunt tortor aliquam nulla facilisi. Ac auctor augue
+            mauris augue neque. Consequat semper viverra nam libero justo
+            laoreet sit amet. &\n Tellus elementum sagittis vitae et leo duis ut
+            diam quam. Velit scelerisque in dictum non consectetur. <br /><br
+            />Tempus iaculis urna id volutpat lacus laoreet non curabitur
+            gravida. Morbi non arcu risus quis varius quam. Turpis massa
+            tincidunt dui ut. Arcu odio ut sem nulla pharetra diam sit amet
+            nisl. Viverra vitae congue eu consequat. Vel elit scelerisque mauris
+            pellentesque pulvinar pellentesque habitant morbi tristique. Massa
+            tincidunt nunc pulvinar sapien et ligula. Arcu ac tortor dignissim
+            convallis aenean et tortor at. Egestas quis ipsum suspendisse
+            ultrices gravida dictum fusce ut. Eleifend donec pretium vulputate
+            sapien nec sagittis aliquam malesuada. Id porta nibh venenatis cras
+            sed felis. Cursus euismod quis viverra nibh cras pulvinar mattis
+            nunc. Nibh cras pulvinar mattis nunc. Sit amet massa vitae tortor
+            condimentum lacinia quis. At varius vel pharetra vel turpis nunc
+            eget. Eget mi proin sed libero enim.
+          </p>
+        </div>
+      </section>
+      <section id="about">
+        <section id="projects">
+          <h2>My Projects</h2>
+          <div class="block">
+            <div class="projects-container">
+              <a href="/project-1">
+                <ProjectCard
+                  imageURL="/images/placeholder_400x300_white.png"
+                  projectName="Social Media Site"
+                />
+              </a>
+              <a href="/project-2">
+                <ProjectCard
+                  imageURL="/images/placeholder_400x300_white.png"
+                  projectName="Restaurant Ordering Application"
+                />
+              </a>
+              <a href="/project-3">
+                <ProjectCard
+                  imageURL="/images/placeholder_400x300_white.png"
+                  projectName="Semantic Search"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="block"></div>
+        </section>
+      </section>
     </section>
-    <section class="block" id="contact">
-      <h2>Contact</h2>
-    </section>
-  </main>
+
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        padding: 1rem;
+        /* margin: 2rem; */
+        min-height: 500px;
+        width: 100%;
+      }
+
+      .block {
+        display: flex;
+        justify-content: center;
+      }
+
+      .skills-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .skills-container > ul {
+        margin: 0 5rem;
+      }
+
+      .projects-container {
+        display: flex;
+      }
+
+      .projects-container > a {
+        text-decoration: none;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 320px) {
+        #intro > .block,
+        .projects-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #intro > .block > img {
+          max-width: 250px;
+          padding: 1rem;
+        }
+      }
+
+      @media screen and (min-width 480px) {
+      }
+
+      @media screen and (min-width: 768px) {
+        #intro > .block,
+        .projects-container {
+          flex-direction: row;
+        }
+
+        .container {
+          margin: 0 2rem;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .container {
+          margin: 0 10%;
+        }
+      }
+
+      @media screen and (min-width: 1440px) {
+        .container {
+          margin: 0 15%;
+        }
+      }
+    </style>
+  </div>
 </Layout>
-
-<style>
-  .projects-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .projects-container > a {
-    text-decoration: none;
-  }
-</style>

@@ -1,3 +1,7 @@
+---
+import Header from "../components/header.astro";
+---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,16 +18,8 @@
 
     <title>Raymond Wolt - Web Developer</title>
   </head>
+  <Header />
   <body>
-    <header>
-      <nav>
-        <a id="home" href="/"> RW</a>
-        <a href="/#about">About Me</a>
-        <a href="/#projects">Projects</a>
-        <a href="/#contact">Contact</a>
-        <a href="/#">Resume</a>
-      </nav>
-    </header>
     <slot />
     <footer>
       <a href="https://github.com/rwolt">
@@ -31,78 +27,41 @@
       </a>
     </footer>
   </body>
+
+  <style is:global>
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #343a40;
+      --accent-color-1: #ff6b6b;
+      --accent-color-2: #61c0bf;
+      --accent-color-3: #ffd166;
+      --text-color: #333333;
+      --background-color: #f4f4f4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--background-color);
+    }
+  </style>
+
+  <style>
+    footer {
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+  </style>
 </html>
-
-<style is:global>
-  :root {
-    --primary-color: #007bff;
-    --secondary-color: #343a40;
-    --accent-color-1: #ff6b6b;
-    --accent-color-2: #61c0bf;
-    --accent-color-3: #ffd166;
-    --text-color: #333333;
-    --background-color: #f4f4f4;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    font-family: "Open Sans", sans-serif;
-  }
-
-  body {
-    margin: 0;
-    background-color: var(--background-color);
-  }
-
-  .block {
-    padding: 3rem;
-    margin: 2rem;
-    height: 500px;
-  }
-</style>
-
-<style>
-  header {
-    padding: 3rem;
-  }
-
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  nav a:first-child {
-    margin-right: auto;
-  }
-
-  nav a {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.4rem 0.8rem;
-  }
-
-  nav a:not(:first-child):not(:last-child):hover,
-  footer a:hover {
-    text-decoration: underline;
-  }
-
-  nav a:last-child {
-    border: 1px solid var(--primary-color);
-    border-radius: 0.5rem;
-  }
-
-  footer {
-    text-align: center;
-  }
-
-  footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-</style>

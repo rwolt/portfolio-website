@@ -3,7 +3,35 @@ const { projectName } = Astro.props;
 ---
 
 <div class="project-detail-heading">
-  <h2>
-    {projectName}
-  </h2>
+  <h2>Full Stack Project</h2>
+  <p>
+    This is a short description of the project and a summary of what was
+    accomplished.
+  </p>
+  <div class="project-detail-heading-links">
+    <a href="#">
+      <p>Live Preview</p>
+    </a>
+    <a href="#">
+      <p>Github Repository</p>
+    </a>
+  </div>
 </div>
+
+<style>
+  .project-detail-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-detail-heading-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-detail-heading-links > a {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.5rem;
+  }
+</style>
