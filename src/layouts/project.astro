@@ -1,11 +1,15 @@
 ---
 import Layout from "../layouts/default.astro";
 import ProjectDetailHeading from "../components/project-detail-heading.astro";
+const { frontmatter } = Astro.props;
 ---
 
 <Layout>
   <div class="project-detail-container">
-    <ProjectDetailHeading />
+    <ProjectDetailHeading
+      projectName={frontmatter.title}
+      projectSummary={frontmatter.summary}
+    />
     <slot />
   </div>
 </Layout>

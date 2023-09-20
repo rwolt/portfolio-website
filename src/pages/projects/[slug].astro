@@ -1,0 +1,18 @@
+---
+export const getStaticPaths = async () => {
+  const projects = await Astro.glob("./**/*.md");
+
+  return projects.map((project) => ({
+    params: {
+      slug: project.frontmatter.slug,
+    },
+    props: project,
+  }));
+};
+
+const { Content } = Astro.props.project;
+---
+
+<article>
+  <Content />
+</article>
