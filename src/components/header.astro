@@ -1,7 +1,13 @@
 <header>
   <nav>
-    <a id="home" href="/">RW</a>
-    <div id="hamburger-button">|||</div>
+    <div class="horizontal-selection">
+      <a id="home" href="/">RW</a>
+      <div id="hamburger-button">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
     <ul class="nav-links">
       <a href="/#about"><li>About Me</li></a>
       <a href="/#projects"><li>Projects</li></a>
@@ -11,11 +17,6 @@
 </header>
 
 <style>
-  .nav-links {
-    display: flex;
-    list-style-type: none;
-  }
-
   header {
     padding: 2rem;
   }
@@ -26,32 +27,64 @@
     align-items: center;
   }
 
-  nav a {
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .nav-links a,
+  .horizontal-selection a {
     color: var(--primary-color);
     font-size: 1.5rem;
     text-decoration: none;
     padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+    text-align: center;
   }
 
-  nav a:not(:last-child):hover,
+  .nav-links a:not(:last-child):hover,
   footer a:hover {
     text-decoration: underline;
   }
 
-  nav a:last-child {
+  .nav-links a:last-child {
     border: 1px solid var(--primary-color);
     border-radius: 0.5rem;
   }
 
+  #hamburger-button {
+    cursor: pointer;
+    display: block;
+  }
+
+  #hamburger-button .line {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+  }
+
   @media screen and (min-width: 320px) {
-    .nav-links {
+    nav {
       flex-direction: column;
-      justify-content: flex-end;
+    }
+
+    .horizontal-selection {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
       width: 100%;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      margin-top: 50px;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .expanded {
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -59,19 +92,19 @@
   }
 
   @media screen and (min-width: 768px) {
+    nav {
+      flex-direction: row;
+    }
+
     .nav-links {
       display: flex;
       flex-direction: row;
-      margin: 0;
       justify-content: flex-end;
       align-items: center;
-      list-style-type: none;
-      position: initial;
     }
 
     #hamburger-button {
       display: none;
-      cursor: pointer;
     }
   }
 </style>
