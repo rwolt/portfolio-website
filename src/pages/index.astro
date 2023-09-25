@@ -2,6 +2,7 @@
 import Layout from "../layouts/default.astro";
 import Skills from "../components/skills.astro";
 import ProjectCard from "../components/project-card.astro";
+import ContactForm from '../components/contact-form.astro';
 ---
 
 <Layout title="Welcome to raymondwolt.com">
@@ -81,7 +82,9 @@ import ProjectCard from "../components/project-card.astro";
     </section>
     <section id="contact">
       <h2>Contact</h2>
-      <div class="block"></div>
+      <div >
+        <ContactForm />
+      </div>
     </section>
     <script>
       import "../scripts/hamburger-menu.ts";

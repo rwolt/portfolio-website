@@ -6,7 +6,6 @@ type SkillsProps = {
 }
 
 const SkillsColumn = ({skills}: SkillsProps)  => {
-  console.log(skills);
   return (
     <ul>
       {skills.map(([skillName, iconName], index) => (
