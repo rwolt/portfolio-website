@@ -2,7 +2,7 @@
 import Layout from "../layouts/default.astro";
 import Skills from "../components/skills.astro";
 import ProjectCard from "../components/project-card.astro";
-import ContactForm from '../components/contact-form.astro';
+import ContactForm from "../components/contact-form.astro";
 ---
 
 <Layout title="Welcome to raymondwolt.com">
@@ -12,8 +12,8 @@ import ContactForm from '../components/contact-form.astro';
         <!-- <img src="/images/placeholder_300x400_white.png" /> -->
         <div class="intro-container">
           <div class="hero">
-          <h1>Raymond Wolt</h1>
-          <h2>Web Developer</h2>
+            <h1>Raymond Wolt</h1>
+            <h2>Web Developer</h2>
           </div>
           <p>
             Hello, I’m Raymond Wolt. I am a web developer who is focused on
@@ -25,7 +25,7 @@ import ContactForm from '../components/contact-form.astro';
             am continuously learning new technologies and best practices to
             improve my skills as a developer.
           </p>
-<h2>My Skills</h2>
+          <h2>My Skills</h2>
           <Skills />
         </div>
       </div>
@@ -40,14 +40,14 @@ import ContactForm from '../components/contact-form.astro';
       <h2>About Me</h2>
       <div class="block">
         <p>
-          Tempus iaculis urna id volutpat lacus laoreet non curabitur
-          gravida. Morbi non arcu risus quis varius quam. Turpis massa tincidunt
-          dui ut. Arcu odio ut sem nulla pharetra diam sit amet nisl. Viverra
-          vitae congue eu consequat. Vel elit scelerisque mauris pellentesque
-          pulvinar pellentesque habitant morbi tristique. Massa tincidunt nunc
-          pulvinar sapien et ligula. Arcu ac tortor dignissim convallis aenean
-          et tortor at. Egestas quis ipsum suspendisse ultrices gravida dictum
-          fusce ut. Eleifend donec pretium vulputate sapien nec sagittis aliquam
+          Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida.
+          Morbi non arcu risus quis varius quam. Turpis massa tincidunt dui ut.
+          Arcu odio ut sem nulla pharetra diam sit amet nisl. Viverra vitae
+          congue eu consequat. Vel elit scelerisque mauris pellentesque pulvinar
+          pellentesque habitant morbi tristique. Massa tincidunt nunc pulvinar
+          sapien et ligula. Arcu ac tortor dignissim convallis aenean et tortor
+          at. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut.
+          Eleifend donec pretium vulputate sapien nec sagittis aliquam
           malesuada. Id porta nibh venenatis cras sed felis. Cursus euismod quis
           viverra nibh cras pulvinar mattis nunc. Nibh cras pulvinar mattis
           nunc. Sit amet massa vitae tortor condimentum lacinia quis. At varius
@@ -59,19 +59,19 @@ import ContactForm from '../components/contact-form.astro';
       <h2>My Projects</h2>
       <div class="block">
         <div class="projects-container">
-          <a href="/project-1">
+          <a href="projects/microblog-site">
             <ProjectCard
               imageURL="/images/placeholder_400x300_white.png"
               projectName="Social Media Site"
             />
           </a>
-          <a href="/project-2">
+          <a href="projects/food-ordering">
             <ProjectCard
               imageURL="/images/placeholder_400x300_white.png"
               projectName="Restaurant Ordering "
             />
           </a>
-          <a href="/project-3">
+          <a href="projects/yt-semantic-search">
             <ProjectCard
               imageURL="/images/placeholder_400x300_white.png"
               projectName="Semantic Search"
@@ -82,7 +82,7 @@ import ContactForm from '../components/contact-form.astro';
     </section>
     <section id="contact">
       <h2>Contact</h2>
-      <div >
+      <div>
         <ContactForm />
       </div>
     </section>
@@ -97,9 +97,10 @@ import ContactForm from '../components/contact-form.astro';
       flex-direction: column;
       align-items: center;
     }
-    
-    h1, h2 {
-      font-family: 'Nunito Sans', sans-serif;
+
+    h1,
+    h2 {
+      font-family: "Nunito Sans", sans-serif;
     }
 
     h2 {
@@ -159,12 +160,12 @@ import ContactForm from '../components/contact-form.astro';
       .intro-container {
         padding: 0;
       }
-      
+
       .hero h1 {
         font-size: 4rem;
         margin: 0;
       }
-      
+
       .hero h2 {
         font-size: 1.75rem;
         margin: 0;
@@ -183,11 +184,10 @@ import ContactForm from '../components/contact-form.astro';
       .container {
         margin: 0 2rem;
       }
-      
+
       /* .intro-container {
         padding-left: 2rem;
       } */
-      
     }
 
     @media screen and (min-width: 1024px) {
