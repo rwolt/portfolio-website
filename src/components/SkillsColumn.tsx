@@ -2,7 +2,7 @@ import styles from "../components/SkillsColumn.module.css";
 import { Icon } from "astro-icon";
 
 type SkillsProps = {
-  skills: string[][];
+  skills: [string, string][];
 };
 
 const SkillsColumn = ({ skills }: SkillsProps) => {

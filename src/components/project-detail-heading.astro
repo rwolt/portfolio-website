@@ -7,7 +7,7 @@ const { projectName, projectSummary } = Astro.props;
   <p>
     {projectSummary}
   </p>
-  <!-- <div class="project-detail-heading-links">
+  <div class="project-detail-heading-links">
     <a href="#">
       <p>Live Preview</p>
     </a>
@@ -15,23 +15,22 @@ const { projectName, projectSummary } = Astro.props;
       <p>Github Repository</p>
     </a>
   </div>
-</div> -->
-
-  <style>
-    .project-detail-heading {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .project-detail-heading-links {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .project-detail-heading-links > a {
-      padding: 0.25rem 0.5rem;
-      margin: 0 0.5rem;
-    }
-  </style>
 </div>
+
+<style>
+  .project-detail-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-detail-heading-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-detail-heading-links > a {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.5rem;
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 export const getStaticPaths = async () => {
-  const projects = await Astro.glob("./**/*.md");
+  const projects = await Astro.glob("./**/*.mdx");
 
   return projects.map((project) => ({
     params: {
@@ -16,3 +16,4 @@ const { Content } = Astro.props.project;
 <article>
   <Content />
 </article>
+
