@@ -1,8 +1,18 @@
 ---
 layout: "../../layouts/project.astro"
 slug: "microblog-site"
-title: Microblog Site
-stack: [React, styled-components, React Router, Firebase]
-summary: "Microblogging site acts a simplified version of Twitter or Mastodon, and allows users to post, repost, like, and comment on messages. The site also allows image posts, and features user profiles where users can view different feeds, like posts, replies, media, and likes associated with that user. "
+title: "Microblog Site"
+stack: ['React', 'styled-components', 'React Router', 'Firebase']
+summary: "Microblogging site acts a simplified version of Twitter or Mastodon, and allows users to post, repost, like, and comment on messages. The site also allows image posts, and features user profiles where users can view different feeds, like posts, replies, media, and likes associated with that user."
 ---
+**Project Purpose and Goal:** The process of building [Microblogging site] combined everything I knew about front end development up until that point. The purpose of the proejct was to build out my first full-featured application with a database and authentication,  and gain experience consuming third party APIs from the front end. Another goal of the project was to learn how to insert and query documents into and from a NoSQL database.
 
+**Web Stack and Explanation:** The project was built using Firebase for Authentication, Database, and File Storage. I chose Firebase because I didn’t yet have experience building server applications or connecting a database to my client application. 
+
+I chose styled-components as a library that could help make my styles more reusable throughout the app, while still using the syntax of vanilla css.  Using styled-components made my layout go faster, because it allowed me to build utility classes that I could reuse throughout the different pages. Components likes buttons could be re-used while retaining their styling. It also helped keep me organized, because each components style was in its own file that was separated from my markup. I prefer this modular way of organizing stylesheets. Astro’s approach is probably my favorite, because it uses vanilla css and doesn’t require creating a second React component like styled-components does. 
+
+I also used several third-party modules to make the app more feature full. I used the date-fns npm module as a lightweight way to easily format dates, and the Dicebear avatars API to generate default profile pictures based on the user email.
+
+**Problems and Thought Process:** There were two major hurdles in completing this project. The first was getting used to using the Firebase api. I got a lot of practice with async/await and Promises. The second hurdle was how to filter database queries to get the correct documents for each feed. For example, if I wanted to display the home feed with a solid heart icon for each post that the logged in user has liked. This required doing multiple asynchronous calls to fetch documents from the database and map over them to output an array of docs with the correct properties to display in the UI. I also needed a way for the posts to be reactive, for example when a user likes or unlikes a post. I struggled with that on this project, but I learned a lot about how to do that cleanly and it helped me once I started building projects using MongoDB. 
+
+**Lessons Learned:** Don’t put too much state in App.js. When I started learning react, I thought it always made sense to keep state in your parent components, but I now realize that this doesn’t scale with larger projects. I have since learned to use state management tools like zustand, and to make my components more modular to prevent passing props to too many child components. This project also started me thinking about performance, especially as it relates to bandwidth and page loading. I used a helper script to compress images on the client side before uploading them to file storage on the server.
